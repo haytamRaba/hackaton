@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Se connecter</a>
+                <a href="register.html" class="btn btn-primary active">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Créer un compte</h2>
+                    <p>Rejoignez EcoRide et commencez à vous déplacer écologiquement</p>
+                </div>
+                <div class="auth-tabs">
+                    <a href="register.html" class="auth-tab active">Inscription</a>
+                    <a href="login.html" class="auth-tab">Connexion</a>
+                </div>
+                <form class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="firstname">Prénom</label>
+                            <input type="text" id="firstname" class="form-input" placeholder="Votre prénom" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="lastname">Nom</label>
+                            <input type="text" id="lastname" class="form-input" placeholder="Votre nom" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="votre.email@exemple.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">Mot de passe</label>
+                        <input type="password" id="password" class="form-input" placeholder="8 caractères minimum" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="role">Je suis</label>
+                        <select id="role" class="form-select" required>
+                            <option value="" disabled selected>Sélectionnez votre profil</option>
+                            <option value="student">Étudiant</option>
+                            <option value="professional">Professionnel</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="checkbox-text">J'accepte les <a href="#">conditions d'utilisation</a> et la <a href="#">politique de confidentialité</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Créer mon compte</button>
+                    <div class="auth-separator">
+                        <span>ou</span>
+                    </div>
+                    <div class="social-auth">
+                        <button type="button" class="btn btn-social btn-google">
+                            <span class="social-icon google"></span>
+                            <span>Continuer avec Google</span>
+                        </button>
+                        <button type="button" class="btn btn-social btn-apple">
+                            <span class="social-icon apple"></span>
+                            <span>Continuer avec Apple</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="auth-footer">
+                    <p>Vous avez déjà un compte ? <a href="login.html">Connectez-vous</a></p>
+                </div>
+            </div>
+            <div class="auth-image">
+                <div class="image-overlay">
+                    <div class="auth-benefits">
+                        <h3>Pourquoi rejoindre EcoRide ?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <span class="benefit-icon eco"></span>
+                                <div class="benefit-text">
+                                    <h4>Écologique</h4>
+                                    <p>Réduisez votre empreinte carbone avec nos véhicules 100% électriques</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon economic"></span>
+                                <div class="benefit-text">
+                                    <h4>Économique</h4>
+                                    <p>Économisez sur vos déplacements avec nos tarifs avantageux</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon flexible"></span>
+                                <div class="benefit-text">
+                                    <h4>Flexible</h4>
+                                    <p>Louez à la minute, à l'heure ou à la journée selon vos besoins</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

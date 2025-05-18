@@ -1,0 +1,357 @@
+/* Styles spécifiques à la page contact */
+
+.contact-hero {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+  padding: var(--spacing-xxl) 0;
+  text-align: center;
+}
+
+.contact-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contenu de contact */
+.contact-content {
+  padding: var(--spacing-xxl) 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--spacing-xl);
+}
+
+.contact-form-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.info-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-item {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(76, 175, 80, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.info-icon.email::before {
+  content: '✉️';
+  font-size: 1.2rem;
+}
+
+.info-icon.phone::before {
+  content: '📞';
+  font-size: 1.2rem;
+}
+
+.info-icon.address::before {
+  content: '📍';
+  font-size: 1.2rem;
+}
+
+.info-content h4 {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.info-note {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.social-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.social-link.facebook::before {
+  content: 'f';
+  font-weight: bold;
+}
+
+.social-link.twitter::before {
+  content: 't';
+  font-weight: bold;
+}
+
+.social-link.instagram::before {
+  content: 'i';
+  font-weight: bold;
+}
+
+.social-link.linkedin::before {
+  content: 'in';
+  font-weight: bold;
+}
+
+.map-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-placeholder {
+  height: 300px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+}
+
+/* Section support */
+.support-section {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-background);
+}
+
+.support-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.support-category {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.category-icon.general {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.category-icon.general::before {
+  content: '❓';
+}
+
+.category-icon.account {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.category-icon.account::before {
+  content: '👤';
+}
+
+.category-icon.vehicles {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.category-icon.vehicles::before {
+  content: '🚲';
+}
+
+.category-icon.safety {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.category-icon.safety::before {
+  content: '🛡️';
+}
+
+.support-category h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.category-links {
+  text-align: left;
+}
+
+.category-links li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.category-links a {
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.category-links a:hover {
+  color: var(--color-primary);
+}
+
+.faq-preview {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-preview h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.faq-list {
+  margin-bottom: var(--spacing-lg);
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: var(--spacing-md);
+}
+
+.faq-question {
+  padding: var(--spacing-md) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question h4 {
+  font-weight: 500;
+}
+
+.faq-toggle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.faq-toggle::before,
+.faq-toggle::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-text);
+  transition: all var(--transition-normal);
+}
+
+.faq-toggle::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.faq-toggle::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.faq-item.active .faq-toggle::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq-answer {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 0 var(--spacing-md);
+  max-height: 500px;
+}
+
+.faq-preview .btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}

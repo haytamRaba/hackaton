@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosque - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/kiosk.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="kiosk-mode">
+    <header class="kiosk-header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <div class="kiosk-info">
+                <div class="kiosk-name">Kiosque: Gare Centrale</div>
+                <div class="kiosk-time">14:30</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="kiosk-welcome">
+            <div class="container">
+                <h2>Bienvenue au kiosque EcoRide</h2>
+                <p>Louez rapidement un véhicule électrique</p>
+            </div>
+        </section>
+
+        <section class="kiosk-options">
+            <div class="container">
+                <div class="options-grid">
+                    <div class="option-card" id="scan-option">
+                        <div class="option-icon scan"></div>
+                        <h3>Scanner mon QR code</h3>
+                        <p>Utilisez l'application EcoRide pour scanner le QR code et déverrouiller un véhicule</p>
+                    </div>
+                    
+                    <div class="option-card" id="quick-option">
+                        <div class="option-icon quick"></div>
+                        <h3>Location rapide</h3>
+                        <p>Louez un véhicule sans compte en utilisant votre carte bancaire</p>
+                    </div>
+                    
+                    <div class="option-card" id="help-option">
+                        <div class="option-icon help"></div>
+                        <h3>Aide</h3>
+                        <p>Besoin d'assistance ? Contactez notre service client</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kiosk-content">
+            <div class="container">
+                <!-- Contenu dynamique qui change en fonction de l'option sélectionnée -->
+                <div class="kiosk-panel" id="scan-panel">
+                    <h3>Scanner votre QR code</h3>
+                    <div class="qr-scanner-container">
+                        <div class="qr-scanner-frame">
+                            <div class="qr-scanner-viewfinder"></div>
+                        </div>
+                        <p class="scanner-instruction">Ouvrez l'application EcoRide et présentez votre QR code devant la caméra</p>
+                    </div>
+                    <div class="panel-actions">
+                        <button class="btn btn-outline btn-back">Retour</button>
+                    </div>
+                </div>
+                
+                <div class="kiosk-panel" id="quick-panel">
+                    <h3>Location rapide</h3>
+                    
+                    <div class="quick-rental-steps">
+                        <div class="quick-step active" data-step="1">
+                            <h4>Choisissez votre véhicule</h4>
+                            <div class="vehicle-type-selection">
+                                <div class="vehicle-type-option" data-type="velo">
+                                    <div class="vehicle-icon velo"></div>
+                                    <span>Vélo électrique</span>
+                                </div>
+                                <div class="vehicle-type-option" data-type="trottinette">
+                                    <div class="vehicle-icon trottinette"></div>
+                                    <span>Trottinette électrique</span>
+                                </div>
+                                <div class="vehicle-type-option" data-type="moto">
+                                    <div class="vehicle-icon moto"></div>
+                                    <span>Moto électrique</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-item" data-id="velo-1">
+                                    <div class="vehicle-image">
+                                        <div class="image-placeholder">
+                                            <span>Vélo City</span>
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-details">
+                                        <h5>Vélo City</h5>
+                                        <div class="vehicle-specs">
+                                            <span class="spec">Batterie: 80%</span>
+                                            <span class="spec">Autonomie: 50km</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary">Sélectionner</button>
+                                </div>
+                                <div class="vehicle-item" data-id="velo-2">
+                                    <div class="vehicle-image">
+                                        <div class="image-placeholder">
+                                            <span>Vélo Sport</span>
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-details">
+                                        <h5>Vélo Sport</h5>
+                                        <div class="vehicle-specs">
+                                            <span class="spec">Batterie: 95%</span>
+                                            <span class="spec">Autonomie: 60km</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary">Sélectionner</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-step" data-step="2">
+                            <h4>Choisissez la durée</h4>
+                            <div class="duration-options">
+                                <div class="duration-option" data-duration="30">
+                                    <div class="duration-header">
+                                        <h5>30 minutes</h5>
+                                        <div class="duration-price">2,50 €</div>
+                                    </div>
+                                </div>
+                                <div class="duration-option" data-duration="60">
+                                    <div class="duration-header">
+                                        <h5>1 heure</h5>
+                                        <div class="duration-price">4,00 €</div>
+                                    </div>
+                                    <div class="duration-badge">Populaire</div>
+                                </div>
+                                <div class="duration-option" data-duration="180">
+                                    <div class="duration-header">
+                                        <h5>3 heures</h5>
+                                        <div class="duration-price">9,00 €</div>
+                                    </div>
+                                </div>
+                                <div class="duration-option" data-duration="1440">
+                                    <div class="duration-header">
+                                        <h5>24 heures</h5>
+                                        <div class="duration-price">18,00 €</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-step" data-step="3">
+                            <h4>Paiement</h4>
+                            <div class="payment-summary">
+                                <div class="summary-item">
+                                    <span class="summary-label">Véhicule</span>
+                                    <span class="summary-value">Vélo City</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Durée</span>
+                                    <span class="summary-value">1 heure</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span class="summary-label">Total</span>
+                                    <span class="summary-value">4,00 €</span>
+                                </div>
+                            </div>
+                            <div class="payment-instructions">
+                                <h5>Insérez votre carte bancaire</h5>
+                                <div class="card-reader-animation"></div>
+                                <p>Votre carte sera débitée du montant indiqué ci-dessus.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-step" data-step="4">
+                            <h4>Déverrouillage</h4>
+                            <div class="unlock-success">
+                                <div class="success-icon"></div>
+                                <h5>Véhicule déverrouillé !</h5>
+                                <p>Votre Vélo City est prêt à être utilisé.</p>
+                                <div class="unlock-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Numéro du véhicule</span>
+                                        <span class="detail-value">V-12345</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Code de déverrouillage</span>
+                                        <span class="detail-value">8426</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Fin de location prévue</span>
+                                        <span class="detail-value">15:30</span>
+                                    </div>
+                                </div>
+                                <div class="qr-code-container" data-qr-content="ECORIDE-VELO-12345" data-qr-size="128" data-qr-label="Scannez pour suivre votre location"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-actions">
+                        <button class="btn btn-outline btn-back">Retour</button>
+                        <button class="btn btn-primary btn-next">Continuer</button>
+                    </div>
+                </div>
+                
+                <div class="kiosk-panel" id="help-panel">
+                    <h3>Besoin d'aide ?</h3>
+                    <div class="help-options">
+                        <div class="help-option">
+                            <div class="help-icon phone"></div>
+                            <h4>Appelez-nous</h4>
+                            <p>Notre service client est disponible 24/7</p>
+                            <div class="help-action">
+                                <a href="tel:+33123456789" class="btn btn-primary">Appeler</a>
+                            </div>
+                        </div>
+                        <div class="help-option">
+                            <div class="help-icon faq"></div>
+                            <h4>Questions fréquentes</h4>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <div class="faq-question">Comment déverrouiller un véhicule ?</div>
+                                    <div class="faq-answer">Utilisez l'application EcoRide ou la fonction de location rapide sur ce kiosque.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">Comment fonctionne la facturation ?</div>
+                                    <div class="faq-answer">Vous êtes facturé selon la durée choisie. Le montant est débité à la fin de votre location.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">Que faire en cas de problème technique ?</div>
+                                    <div class="faq-answer">Contactez notre service client au numéro indiqué ou utilisez l'application pour signaler un problème.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-actions">
+                        <button class="btn btn-outline btn-back">Retour</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="kiosk-footer">
+        <div class="container">
+            <div class="footer-info">
+                <p>© 2025 EcoRide - Kiosque #123 - Gare Centrale</p>
+            </div>
+            <div class="language-selector">
+                <select id="language">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/qrcode.js"></script>
+    <script src="js/kiosk.js"></script>
+</body>
+</html>

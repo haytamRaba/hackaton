@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Se connecter</a>
+                <a href="register.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h2>Nous contacter</h2>
+                <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h3>Envoyez-nous un message</h3>
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstname">Prénom</label>
+                                    <input type="text" id="firstname" class="form-input" placeholder="Votre prénom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="lastname">Nom</label>
+                                    <input type="text" id="lastname" class="form-input" placeholder="Votre nom" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" id="email" class="form-input" placeholder="votre.email@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Sujet</label>
+                                <select id="subject" class="form-select" required>
+                                    <option value="" disabled selected>Sélectionnez un sujet</option>
+                                    <option value="info">Informations générales</option>
+                                    <option value="subscription">Abonnements</option>
+                                    <option value="technical">Support technique</option>
+                                    <option value="business">Partenariats</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="vehicle-type">Type de véhicule concerné</label>
+                                <select id="vehicle-type" class="form-select">
+                                    <option value="" selected>Tous les véhicules</option>
+                                    <option value="velo">Vélos électriques</option>
+                                    <option value="trottinette">Trottinettes électriques</option>
+                                    <option value="moto">Motos électriques</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea id="message" class="form-input" rows="5" placeholder="Votre message" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span class="checkbox-text">J'accepte que mes données soient traitées conformément à la <a href="#">politique de confidentialité</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <h3>Informations de contact</h3>
+                            <div class="info-item">
+                                <div class="info-icon email"></div>
+                                <div class="info-content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon phone"></div>
+                                <div class="info-content">
+                                    <h4>Téléphone</h4>
+                                    <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                                    <p class="info-note">Du lundi au vendredi, 9h-18h</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon address"></div>
+                                <div class="info-content">
+                                    <h4>Adresse</h4>
+                                    <p>123 Avenue de la Mobilité<br>75001 Paris, France</p>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook" aria-label="Facebook"></a>
+                                <a href="#" class="social-link twitter" aria-label="Twitter"></a>
+                                <a href="#" class="social-link instagram" aria-label="Instagram"></a>
+                                <a href="#" class="social-link linkedin" aria-label="LinkedIn"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="map-card">
+                            <div class="map-placeholder">
+                                <span>Carte de localisation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <div class="container">
+                <h2 class="section-title">Centre d'aide</h2>
+                
+                <div class="support-categories">
+                    <div class="support-category">
+                        <div class="category-icon general"></div>
+                        <h3>Questions générales</h3>
+                        <ul class="category-links">
+                            <li><a href="#">Comment fonctionne EcoRide ?</a></li>
+                            <li><a href="#">Tarifs et abonnements</a></li>
+                            <li><a href="#">Zones de service</a></li>
+                            <li><a href="#">Règles de stationnement</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-category">
+                        <div class="category-icon account"></div>
+                        <h3>Compte et paiement</h3>
+                        <ul class="category-links">
+                            <li><a href="#">Créer un compte</a></li>
+                            <li><a href="#">Méthodes de paiement</a></li>
+                            <li><a href="#">Facturation</a></li>
+                            <li><a href="#">Problèmes de connexion</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-category">
+                        <div class="category-icon vehicles"></div>
+                        <h3>Véhicules</h3>
+                        <ul class="category-links">
+                            <li><a href="#">Utilisation des vélos électriques</a></li>
+                            <li><a href="#">Utilisation des trottinettes électriques</a></li>
+                            <li><a href="#">Utilisation des motos électriques</a></li>
+                            <li><a href="#">Signaler un problème technique</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-category">
+                        <div class="category-icon safety"></div>
+                        <h3>Sécurité</h3>
+                        <ul class="category-links">
+                            <li><a href="#">Conseils de sécurité</a></li>
+                            <li><a href="#">Port du casque</a></li>
+                            <li><a href="#">Règles de circulation</a></li>
+                            <li><a href="#">Assurance et responsabilité</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-preview">
+                    <h3>Questions fréquentes</h3>
+                    
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Comment débloquer un véhicule ?</h4>
+                                <span class="faq-toggle"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Pour débloquer un véhicule, ouvrez l'application EcoRide, localisez le véhicule sur la carte, puis scannez le QR code présent sur le véhicule ou saisissez son numéro d'identification. Vous pouvez également réserver un véhicule jusqu'à 30 minutes à l'avance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Que faire en cas de panne ?</h4>
+                                <span class="faq-toggle"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>En cas de panne, utilisez l'option "Signaler un problème" dans l'application. Notre équipe technique sera notifiée et interviendra dans les plus brefs délais. Si vous êtes en cours de location, vous ne serez pas facturé pour le temps d'immobilisation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Comment fonctionne la facturation ?</h4>
+                                <span class="faq-toggle"></span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>La facturation dépend de votre formule d'abonnement. Sans abonnement, vous payez à la minute selon le type de véhicule. Avec un abonnement, vous bénéficiez de minutes gratuites quotidiennes et de tarifs préférentiels. Le paiement est automatiquement prélevé sur votre moyen de paiement enregistré.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-outline">Voir toutes les questions</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à rouler ?</h2>
+                <p>Rejoignez notre communauté de plus de 10 000 utilisateurs satisfaits</p>
+                <a href="register.html" class="btn btn-primary">Créer un compte gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

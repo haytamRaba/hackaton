@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte des kiosques - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html" class="active">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Se connecter</a>
+                <a href="register.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="map-container">
+            <div class="map-sidebar">
+                <div class="map-filters">
+                    <h2>Filtres</h2>
+                    <div class="form-group">
+                        <label class="form-label">Type de véhicule</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="vehicle-type" value="velo" checked>
+                                <span class="checkbox-text">Vélos électriques</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="vehicle-type" value="trottinette" checked>
+                                <span class="checkbox-text">Trottinettes électriques</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="vehicle-type" value="moto" checked>
+                                <span class="checkbox-text">Motos électriques</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Disponibilité</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="availability" value="available" checked>
+                                <span class="checkbox-text">Véhicules disponibles</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="availability" value="parking" checked>
+                                <span class="checkbox-text">Places de parking disponibles</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Distance maximale</label>
+                        <input type="range" min="1" max="10" value="5" class="range-slider" id="distance-range">
+                        <div class="range-value"><span id="distance-value">5</span> km</div>
+                    </div>
+                    <button class="btn btn-primary btn-block">Appliquer les filtres</button>
+                </div>
+                <div class="kiosk-list">
+                    <h2>Kiosques à proximité</h2>
+                    <div class="kiosk-items">
+                        <div class="kiosk-item" data-id="1">
+                            <div class="kiosk-name">Gare Centrale</div>
+                            <div class="kiosk-distance">0.3 km</div>
+                            <div class="kiosk-availability">
+                                <div class="availability-item">
+                                    <span class="vehicle-icon velo"></span>
+                                    <span class="availability-count">5</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon trottinette"></span>
+                                    <span class="availability-count">3</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon moto"></span>
+                                    <span class="availability-count">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kiosk-item" data-id="2">
+                            <div class="kiosk-name">Place du Marché</div>
+                            <div class="kiosk-distance">0.7 km</div>
+                            <div class="kiosk-availability">
+                                <div class="availability-item">
+                                    <span class="vehicle-icon velo"></span>
+                                    <span class="availability-count">2</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon trottinette"></span>
+                                    <span class="availability-count">4</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon moto"></span>
+                                    <span class="availability-count">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kiosk-item" data-id="3">
+                            <div class="kiosk-name">Parc Municipal</div>
+                            <div class="kiosk-distance">1.2 km</div>
+                            <div class="kiosk-availability">
+                                <div class="availability-item">
+                                    <span class="vehicle-icon velo"></span>
+                                    <span class="availability-count">8</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon trottinette"></span>
+                                    <span class="availability-count">6</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon moto"></span>
+                                    <span class="availability-count">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kiosk-item" data-id="4">
+                            <div class="kiosk-name">Centre Commercial</div>
+                            <div class="kiosk-distance">1.8 km</div>
+                            <div class="kiosk-availability">
+                                <div class="availability-item">
+                                    <span class="vehicle-icon velo"></span>
+                                    <span class="availability-count">4</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon trottinette"></span>
+                                    <span class="availability-count">2</span>
+                                </div>
+                                <div class="availability-item">
+                                    <span class="vehicle-icon moto"></span>
+                                    <span class="availability-count">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-view">
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <p>Carte interactive des kiosques</p>
+                        <p class="map-note">Dans une version réelle, cette zone afficherait une carte Google Maps ou Leaflet avec les kiosques géolocalisés</p>
+                    </div>
+                </div>
+                <div class="map-controls">
+                    <button class="map-control-btn" id="locate-me">
+                        <span class="control-icon locate"></span>
+                    </button>
+                    <button class="map-control-btn" id="zoom-in">
+                        <span class="control-icon plus"></span>
+                    </button>
+                    <button class="map-control-btn" id="zoom-out">
+                        <span class="control-icon minus"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="kiosk-popup" id="kiosk-popup">
+            <div class="popup-header">
+                <h2 id="popup-kiosk-name">Gare Centrale</h2>
+                <button class="popup-close" id="popup-close">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="popup-info">
+                    <div class="info-item">
+                        <span class="info-label">Distance</span>
+                        <span class="info-value" id="popup-distance">0.3 km</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Adresse</span>
+                        <span class="info-value" id="popup-address">123 Rue de la Gare, 75001</span>
+                    </div>
+                </div>
+                <div class="popup-availability">
+                    <h3>Véhicules disponibles</h3>
+                    <div class="vehicle-tabs">
+                        <button class="vehicle-tab active" data-vehicle="velo">Vélos</button>
+                        <button class="vehicle-tab" data-vehicle="trottinette">Trottinettes</button>
+                        <button class="vehicle-tab" data-vehicle="moto">Motos</button>
+                    </div>
+                    <div class="vehicle-content active" id="velo-content">
+                        <div class="vehicle-list">
+                            <div class="vehicle-item">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Vélo City</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Vélo City</h4>
+                                    <div class="vehicle-specs">
+                                        <span class="spec">Autonomie: 50km</span>
+                                        <span class="spec">Batterie: 80%</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">Réserver</button>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Vélo Sport</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Vélo Sport</h4>
+                                    <div class="vehicle-specs">
+                                        <span class="spec">Autonomie: 60km</span>
+                                        <span class="spec">Batterie: 95%</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">Réserver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-content" id="trottinette-content">
+                        <div class="vehicle-list">
+                            <div class="vehicle-item">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Trottinette Urban</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Trottinette Urban</h4>
+                                    <div class="vehicle-specs">
+                                        <span class="spec">Autonomie: 30km</span>
+                                        <span class="spec">Batterie: 75%</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">Réserver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vehicle-content" id="moto-content">
+                        <div class="vehicle-list">
+                            <div class="vehicle-item">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Moto Eco</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-details">
+                                    <h4>Moto Eco</h4>
+                                    <div class="vehicle-specs">
+                                        <span class="spec">Autonomie: 80km</span>
+                                        <span class="spec">Batterie: 90%</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">Réserver</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-actions">
+                    <button class="btn btn-outline btn-block">Itinéraire</button>
+                    <button class="btn btn-primary btn-block">Voir tous les véhicules</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>

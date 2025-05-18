@@ -1,0 +1,654 @@
+/* Styles spécifiques à l'interface kiosque */
+
+.kiosk-mode {
+  /* Styles spécifiques pour le mode kiosque */
+  background-color: var(--color-background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* En-tête du kiosque */
+.kiosk-header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-md) 0;
+}
+
+.kiosk-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kiosk-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.kiosk-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.kiosk-time {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Section d'accueil du kiosque */
+.kiosk-welcome {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.kiosk-welcome h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.kiosk-welcome p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+}
+
+/* Options du kiosque */
+.kiosk-options {
+  padding: var(--spacing-xl) 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.option-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.option-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.option-icon.scan {
+  background-color: rgba(76, 175, 80, 0.1);
+  position: relative;
+}
+
+.option-icon.scan::before {
+  content: '📱';
+}
+
+.option-icon.quick {
+  background-color: rgba(33, 150, 243, 0.1);
+  position: relative;
+}
+
+.option-icon.quick::before {
+  content: '⚡';
+}
+
+.option-icon.help {
+  background-color: rgba(255, 152, 0, 0.1);
+  position: relative;
+}
+
+.option-icon.help::before {
+  content: '❓';
+}
+
+.option-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.option-card p {
+  color: var(--color-text-light);
+}
+
+/* Contenu du kiosque */
+.kiosk-content {
+  flex: 1;
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-background);
+}
+
+.kiosk-panel {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  display: none;
+}
+
+.kiosk-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.kiosk-panel h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Scanner QR */
+.qr-scanner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.qr-scanner-frame {
+  width: 300px;
+  height: 300px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-md);
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+}
+
+.qr-scanner-viewfinder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.3);
+}
+
+.qr-scanner-viewfinder::before,
+.qr-scanner-viewfinder::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--color-primary);
+  border-style: solid;
+}
+
+.qr-scanner-viewfinder::before {
+  top: -2px;
+  left: -2px;
+  border-width: 2px 0 0 2px;
+}
+
+.qr-scanner-viewfinder::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 2px 2px 0;
+}
+
+.scanner-instruction {
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Location rapide */
+.quick-rental-steps {
+  margin-bottom: var(--spacing-xl);
+}
+
+.quick-step {
+  display: none;
+}
+
+.quick-step.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.quick-step h4 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Sélection du type de véhicule */
+.vehicle-type-selection {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.vehicle-type-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+}
+
+.vehicle-type-option:hover {
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.vehicle-type-option.active {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.vehicle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.vehicle-icon.velo {
+  background-color: rgba(76, 175, 80, 0.1);
+  position: relative;
+}
+
+.vehicle-icon.velo::before {
+  content: '🚲';
+}
+
+.vehicle-icon.trottinette {
+  background-color: rgba(255, 152, 0, 0.1);
+  position: relative;
+}
+
+.vehicle-icon.trottinette::before {
+  content: '🛴';
+}
+
+.vehicle-icon.moto {
+  background-color: rgba(33, 150, 243, 0.1);
+  position: relative;
+}
+
+.vehicle-icon.moto::before {
+  content: '🏍️';
+}
+
+/* Liste des véhicules */
+.vehicle-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.vehicle-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+}
+
+.vehicle-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.vehicle-details {
+  flex: 1;
+}
+
+.vehicle-details h5 {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.vehicle-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Options de durée */
+.duration-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.duration-option {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.duration-option:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.duration-option.active {
+  border: 2px solid var(--color-primary);
+}
+
+.duration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration-price {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.duration-badge {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Résumé du paiement */
+.payment-summary {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-item.total {
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: var(--spacing-sm);
+}
+
+.payment-instructions {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.payment-instructions h5 {
+  margin-bottom: var(--spacing-md);
+}
+
+.card-reader-animation {
+  width: 200px;
+  height: 100px;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius-md);
+  margin: 0 auto var(--spacing-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-reader-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: cardReaderScan 2s infinite;
+}
+
+@keyframes cardReaderScan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Déverrouillage réussi */
+.unlock-success {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(76, 175, 80, 0.1);
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.success-icon::before {
+  content: '✓';
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.unlock-success h5 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.unlock-details {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  text-align: left;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-value {
+  font-weight: 600;
+}
+
+.qr-code-container {
+  margin: var(--spacing-lg) auto;
+  text-align: center;
+}
+
+.qr-code-label {
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Options d'aide */
+.help-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.help-option {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+}
+
+.help-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.help-icon.phone {
+  background-color: rgba(76, 175, 80, 0.1);
+  position: relative;
+}
+
+.help-icon.phone::before {
+  content: '📞';
+}
+
+.help-icon.faq {
+  background-color: rgba(33, 150, 243, 0.1);
+  position: relative;
+}
+
+.help-icon.faq::before {
+  content: '❓';
+}
+
+.help-option h4 {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.help-action {
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: var(--spacing-md);
+}
+
+.faq-question {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Actions du panneau */
+.panel-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-xl);
+}
+
+/* Pied de page du kiosque */
+.kiosk-footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: var(--spacing-md) 0;
+}
+
+.kiosk-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kiosk-footer .language-selector select {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vehicle-type-selection {
+    flex-direction: column;
+  }
+  
+  .help-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .kiosk-welcome h2 {
+    font-size: 2rem;
+  }
+  
+  .panel-actions {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .panel-actions button {
+    width: 100%;
+  }
+}

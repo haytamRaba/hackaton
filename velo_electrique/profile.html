@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilisateur - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="profile.html" class="btn btn-outline active">Mon compte</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <div class="container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <div class="avatar-placeholder">MP</div>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Marie Pelletier</h2>
+                        <p class="profile-email">marie.pelletier@exemple.com</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">42</span>
+                                <span class="stat-label">Locations</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">187</span>
+                                <span class="stat-label">km parcourus</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">28</span>
+                                <span class="stat-label">kg CO₂ économisés</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="profile-sidebar">
+                        <nav class="profile-nav">
+                            <a href="#" class="profile-nav-item active" data-tab="history">Historique</a>
+                            <a href="#" class="profile-nav-item" data-tab="stats">Statistiques</a>
+                            <a href="#" class="profile-nav-item" data-tab="subscription">Abonnement</a>
+                            <a href="#" class="profile-nav-item" data-tab="payment">Paiement</a>
+                            <a href="#" class="profile-nav-item" data-tab="settings">Paramètres</a>
+                        </nav>
+                    </div>
+
+                    <div class="profile-main">
+                        <div class="profile-tab active" id="history-tab">
+                            <h3>Historique des locations</h3>
+                            
+                            <div class="history-filters">
+                                <div class="filter-group">
+                                    <label class="form-label">Type de véhicule</label>
+                                    <select class="form-select">
+                                        <option value="all">Tous les véhicules</option>
+                                        <option value="velo">Vélos électriques</option>
+                                        <option value="trottinette">Trottinettes électriques</option>
+                                        <option value="moto">Motos électriques</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label class="form-label">Période</label>
+                                    <select class="form-select">
+                                        <option value="all">Toutes les périodes</option>
+                                        <option value="month">Ce mois-ci</option>
+                                        <option value="3months">3 derniers mois</option>
+                                        <option value="year">Cette année</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="history-list">
+                                <div class="history-item">
+                                    <div class="history-icon velo"></div>
+                                    <div class="history-details">
+                                        <div class="history-title">
+                                            <h4>Vélo City</h4>
+                                            <span class="history-date">15 mai 2025</span>
+                                        </div>
+                                        <div class="history-info">
+                                            <span>Gare Centrale → Place du Marché</span>
+                                            <span>Durée: 45 min</span>
+                                            <span>Distance: 5.2 km</span>
+                                        </div>
+                                        <div class="history-price">4,00 €</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="history-item">
+                                    <div class="history-icon trottinette"></div>
+                                    <div class="history-details">
+                                        <div class="history-title">
+                                            <h4>Trottinette Urban</h4>
+                                            <span class="history-date">10 mai 2025</span>
+                                        </div>
+                                        <div class="history-info">
+                                            <span>Parc Municipal → Centre Commercial</span>
+                                            <span>Durée: 20 min</span>
+                                            <span>Distance: 2.8 km</span>
+                                        </div>
+                                        <div class="history-price">2,50 €</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="history-item">
+                                    <div class="history-icon moto"></div>
+                                    <div class="history-details">
+                                        <div class="history-title">
+                                            <h4>Moto Eco</h4>
+                                            <span class="history-date">5 mai 2025</span>
+                                        </div>
+                                        <div class="history-info">
+                                            <span>Centre Commercial → Université</span>
+                                            <span>Durée: 35 min</span>
+                                            <span>Distance: 8.5 km</span>
+                                        </div>
+                                        <div class="history-price">7,50 €</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="history-item">
+                                    <div class="history-icon velo"></div>
+                                    <div class="history-details">
+                                        <div class="history-title">
+                                            <h4>Vélo Sport</h4>
+                                            <span class="history-date">28 avril 2025</span>
+                                        </div>
+                                        <div class="history-info">
+                                            <span>Université → Gare Centrale</span>
+                                            <span>Durée: 50 min</span>
+                                            <span>Distance: 6.1 km</span>
+                                        </div>
+                                        <div class="history-price">4,00 €</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pagination">
+                                <button class="pagination-btn" disabled>&laquo;</button>
+                                <button class="pagination-btn active">1</button>
+                                <button class="pagination-btn">2</button>
+                                <button class="pagination-btn">3</button>
+                                <button class="pagination-btn">&raquo;</button>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-tab" id="stats-tab">
+                            <h3>Mes statistiques</h3>
+                            
+                            <div class="stats-period">
+                                <button class="stats-period-btn active">Mois</button>
+                                <button class="stats-period-btn">Trimestre</button>
+                                <button class="stats-period-btn">Année</button>
+                                <button class="stats-period-btn">Total</button>
+                            </div>
+                            
+                            <div class="stats-cards">
+                                <div class="stats-card">
+                                    <div class="stats-card-header">
+                                        <h4>Utilisation par type de véhicule</h4>
+                                    </div>
+                                    <div class="stats-card-content">
+                                        <div class="chart-placeholder">
+                                            <div class="chart-legend">
+                                                <div class="legend-item">
+                                                    <span class="legend-color velo"></span>
+                                                    <span>Vélos: 65%</span>
+                                                </div>
+                                                <div class="legend-item">
+                                                    <span class="legend-color trottinette"></span>
+                                                    <span>Trottinettes: 20%</span>
+                                                </div>
+                                                <div class="legend-item">
+                                                    <span class="legend-color moto"></span>
+                                                    <span>Motos: 15%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-card">
+                                    <div class="stats-card-header">
+                                        <h4>Kilomètres parcourus</h4>
+                                    </div>
+                                    <div class="stats-card-content">
+                                        <div class="chart-placeholder">
+                                            <span>Graphique des kilomètres parcourus par mois</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="stats-card">
+                                    <div class="stats-card-header">
+                                        <h4>Impact environnemental</h4>
+                                    </div>
+                                    <div class="stats-card-content">
+                                        <div class="eco-stats">
+                                            <div class="eco-stat">
+                                                <div class="eco-stat-value">28 kg</div>
+                                                <div class="eco-stat-label">CO₂ économisé</div>
+                                            </div>
+                                            <div class="eco-stat">
+                                                <div class="eco-stat-value">7</div>
+                                                <div class="eco-stat-label">Arbres équivalents</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-tab" id="subscription-tab">
+                            <h3>Mon abonnement</h3>
+                            
+                            <div class="current-subscription">
+                                <div class="subscription-card">
+                                    <div class="subscription-header">
+                                        <h4>Abonnement Étudiant</h4>
+                                        <div class="subscription-badge">Actif</div>
+                                    </div>
+                                    <div class="subscription-details">
+                                        <div class="subscription-info">
+                                            <span class="info-label">Date de début</span>
+                                            <span class="info-value">01/03/2025</span>
+                                        </div>
+                                        <div class="subscription-info">
+                                            <span class="info-label">Date de fin</span>
+                                            <span class="info-value">01/03/2026</span>
+                                        </div>
+                                        <div class="subscription-info">
+                                            <span class="info-label">Prochain paiement</span>
+                                            <span class="info-value">01/06/2025</span>
+                                        </div>
+                                        <div class="subscription-info">
+                                            <span class="info-label">Montant</span>
+                                            <span class="info-value">9,90 € / mois</span>
+                                        </div>
+                                    </div>
+                                    <div class="subscription-benefits">
+                                        <h5>Avantages inclus</h5>
+                                        <ul>
+                                            <li>30 minutes gratuites par jour sur les vélos</li>
+                                            <li>15 minutes gratuites par jour sur les trottinettes</li>
+                                            <li>Réduction de 20% sur les motos électriques</li>
+                                            <li>Réservation prioritaire</li>
+                                        </ul>
+                                    </div>
+                                    <div class="subscription-actions">
+                                        <button class="btn btn-outline">Modifier mon abonnement</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="loyalty-program">
+                                <h4>Programme de fidélité</h4>
+                                <div class="loyalty-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="progress-text">7/10 locations pour obtenir une location gratuite</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-tab" id="payment-tab">
+                            <h3>Moyens de paiement</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <div class="payment-card">
+                                        <div class="card-info">
+                                            <div class="card-type visa"></div>
+                                            <div class="card-number">•••• •••• •••• 1234</div>
+                                        </div>
+                                        <div class="card-details">
+                                            <div class="card-expiry">09/26</div>
+                                            <div class="card-badge">Principal</div>
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="btn btn-text">Modifier</button>
+                                            <button class="btn btn-text">Supprimer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-outline">+ Ajouter un moyen de paiement</button>
+                            </div>
+                            
+                            <div class="billing-history">
+                                <h4>Historique de facturation</h4>
+                                <div class="billing-list">
+                                    <div class="billing-item">
+                                        <div class="billing-date">01/05/2025</div>
+                                        <div class="billing-description">Abonnement Étudiant - Mai 2025</div>
+                                        <div class="billing-amount">9,90 €</div>
+                                        <div class="billing-action">
+                                            <button class="btn btn-text">Télécharger</button>
+                                        </div>
+                                    </div>
+                                    <div class="billing-item">
+                                        <div class="billing-date">01/04/2025</div>
+                                        <div class="billing-description">Abonnement Étudiant - Avril 2025</div>
+                                        <div class="billing-amount">9,90 €</div>
+                                        <div class="billing-action">
+                                            <button class="btn btn-text">Télécharger</button>
+                                        </div>
+                                    </div>
+                                    <div class="billing-item">
+                                        <div class="billing-date">01/03/2025</div>
+                                        <div class="billing-description">Abonnement Étudiant - Mars 2025</div>
+                                        <div class="billing-amount">9,90 €</div>
+                                        <div class="billing-action">
+                                            <button class="btn btn-text">Télécharger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-tab" id="settings-tab">
+                            <h3>Paramètres du compte</h3>
+                            
+                            <div class="settings-section">
+                                <h4>Informations personnelles</h4>
+                                <form class="settings-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="firstname">Prénom</label>
+                                            <input type="text" id="firstname" class="form-input" value="Marie">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="lastname">Nom</label>
+                                            <input type="text" id="lastname" class="form-input" value="Pelletier">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="email" id="email" class="form-input" value="marie.pelletier@exemple.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone">Téléphone</label>
+                                        <input type="tel" id="phone" class="form-input" value="06 12 34 56 78">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h4>Préférences</h4>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label class="form-label">Notifications</label>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" checked>
+                                                <span class="checkbox-text">Rappels de fin de location</span>
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" checked>
+                                                <span class="checkbox-text">Promotions et offres spéciales</span>
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" checked>
+                                                <span class="checkbox-text">Nouveaux kiosques à proximité</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="language">Langue</label>
+                                        <select id="language" class="form-select">
+                                            <option value="fr" selected>Français</option>
+                                            <option value="en">English</option>
+                                            <option value="es">Español</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="theme">Thème</label>
+                                        <select id="theme" class="form-select">
+                                            <option value="light" selected>Clair</option>
+                                            <option value="dark">Sombre</option>
+                                            <option value="system">Système</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enregistrer les préférences</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h4>Sécurité</h4>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label class="form-label" for="current-password">Mot de passe actuel</label>
+                                        <input type="password" id="current-password" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="new-password">Nouveau mot de passe</label>
+                                        <input type="password" id="new-password" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="confirm-password">Confirmer le mot de passe</label>
+                                        <input type="password" id="confirm-password" class="form-input">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Changer le mot de passe</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section danger-zone">
+                                <h4>Zone de danger</h4>
+                                <p>Attention, ces actions sont irréversibles.</p>
+                                <button class="btn btn-danger">Supprimer mon compte</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language-selector">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

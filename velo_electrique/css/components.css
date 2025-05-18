@@ -1,0 +1,245 @@
+/* Composants UI réutilisables */
+
+/* Conteneur */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Cartes */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Formulaires */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-white);
+  font-family: var(--font-body);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.badge-velo {
+  background-color: var(--color-velo);
+  color: var(--color-white);
+}
+
+.badge-trottinette {
+  background-color: var(--color-trottinette);
+  color: var(--color-white);
+}
+
+.badge-moto {
+  background-color: var(--color-moto);
+  color: var(--color-white);
+}
+
+/* Alertes */
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.alert-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid var(--color-success);
+  color: var(--color-success);
+}
+
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid var(--color-warning);
+  color: var(--color-warning);
+}
+
+.alert-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-left: 4px solid var(--color-danger);
+  color: var(--color-danger);
+}
+
+/* Titres de section */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Image placeholders pour le développement */
+.image-placeholder {
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Icônes pour les avantages */
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--border-radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon.eco {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--color-primary);
+}
+
+.benefit-icon.economic {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--color-warning);
+}
+
+.benefit-icon.flexible {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: var(--color-secondary);
+}
+
+.benefit-icon.accessible {
+  background-color: rgba(156, 39, 176, 0.1);
+  color: #9C27B0;
+}
+
+/* Étapes numérotées */
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin: 0 auto var(--spacing-md);
+}

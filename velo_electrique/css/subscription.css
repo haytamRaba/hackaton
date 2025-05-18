@@ -1,0 +1,450 @@
+/* Styles spécifiques à la page abonnement */
+
+.subscription-hero {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
+  padding: var(--spacing-xxl) 0;
+  text-align: center;
+}
+
+.subscription-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.subscription-hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Plans d'abonnement */
+.subscription-plans {
+  padding: var(--spacing-xxl) 0;
+}
+
+.plan-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: var(--transition-normal);
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: var(--transition-normal);
+  border-radius: 50%;
+}
+
+.toggle input:checked + .toggle-slider {
+  background-color: var(--color-primary);
+}
+
+.toggle input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.discount {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.plan-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-card.popular {
+  border: 2px solid var(--color-primary);
+  transform: scale(1.05);
+}
+
+.plan-card.popular:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 0;
+  right: var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+  font-weight: 500;
+}
+
+.plan-header {
+  padding: var(--spacing-lg);
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.plan-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.plan-price {
+  margin-bottom: var(--spacing-sm);
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.price-period {
+  color: var(--color-text-light);
+}
+
+.plan-features {
+  padding: var(--spacing-lg);
+}
+
+.plan-features ul {
+  list-style: none;
+}
+
+.plan-features li {
+  padding: var(--spacing-xs) 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.plan-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.plan-cta {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+/* Offres spéciales */
+.special-offers {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-background);
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.offer-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-image {
+  height: 200px;
+}
+
+.offer-image .image-placeholder {
+  height: 100%;
+  border-radius: 0;
+}
+
+.offer-content {
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.offer-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.offer-description {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.offer-features {
+  margin-bottom: var(--spacing-lg);
+}
+
+.offer-features ul {
+  list-style: disc;
+  padding-left: var(--spacing-lg);
+}
+
+.offer-features li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.offer-content .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Comparaison des véhicules */
+.vehicle-comparison {
+  padding: var(--spacing-xxl) 0;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--spacing-md);
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.comparison-table thead th {
+  background-color: var(--color-background);
+  position: sticky;
+  top: 0;
+}
+
+.vehicle-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.vehicle-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.vehicle-icon.velo {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--color-velo);
+  position: relative;
+}
+
+.vehicle-icon.velo::before {
+  content: '🚲';
+}
+
+.vehicle-icon.trottinette {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: var(--color-trottinette);
+  position: relative;
+}
+
+.vehicle-icon.trottinette::before {
+  content: '🛴';
+}
+
+.vehicle-icon.moto {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: var(--color-moto);
+  position: relative;
+}
+
+.vehicle-icon.moto::before {
+  content: '🏍️';
+}
+
+.vehicle-header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* FAQ */
+.faq {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-background);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.faq-toggle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.faq-toggle::before,
+.faq-toggle::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-text);
+  transition: all var(--transition-normal);
+}
+
+.faq-toggle::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.faq-toggle::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.faq-item.active .faq-toggle::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq-answer {
+  padding: 0 var(--spacing-md);
+  max-height: 0;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  max-height: 500px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .plan-card.popular {
+    transform: none;
+  }
+  
+  .plan-card.popular:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-toggle {
+    flex-direction: column;
+  }
+  
+  .offer-card {
+    flex-direction: column;
+  }
+  
+  .offer-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .subscription-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .price-amount {
+    font-size: 2rem;
+  }
+}

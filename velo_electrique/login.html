@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline active">Se connecter</a>
+                <a href="register.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2>Connexion</h2>
+                    <p>Accédez à votre compte EcoRide</p>
+                </div>
+                <div class="auth-tabs">
+                    <a href="register.html" class="auth-tab">Inscription</a>
+                    <a href="login.html" class="auth-tab active">Connexion</a>
+                </div>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="votre.email@exemple.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">Mot de passe</label>
+                        <input type="password" id="password" class="form-input" placeholder="Votre mot de passe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkbox-text">Se souvenir de moi</span>
+                        </label>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                    <div class="auth-separator">
+                        <span>ou</span>
+                    </div>
+                    <div class="social-auth">
+                        <button type="button" class="btn btn-social btn-google">
+                            <span class="social-icon google"></span>
+                            <span>Continuer avec Google</span>
+                        </button>
+                        <button type="button" class="btn btn-social btn-apple">
+                            <span class="social-icon apple"></span>
+                            <span>Continuer avec Apple</span>
+                        </button>
+                    </div>
+                </form>
+                <div class="auth-footer">
+                    <p>Vous n'avez pas de compte ? <a href="register.html">Inscrivez-vous</a></p>
+                </div>
+            </div>
+            <div class="auth-image">
+                <div class="image-overlay">
+                    <div class="auth-benefits">
+                        <h3>Nos véhicules électriques</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <span class="benefit-icon" style="background-color: rgba(76, 175, 80, 0.1); color: var(--color-velo);">🚲</span>
+                                <div class="benefit-text">
+                                    <h4>Vélos électriques</h4>
+                                    <p>Parfaits pour les déplacements urbains, nos vélos électriques vous permettent de vous déplacer sans effort.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon" style="background-color: rgba(255, 152, 0, 0.1); color: var(--color-trottinette);">🛴</span>
+                                <div class="benefit-text">
+                                    <h4>Trottinettes électriques</h4>
+                                    <p>Rapides et maniables, nos trottinettes sont idéales pour les courts trajets en ville.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon" style="background-color: rgba(33, 150, 243, 0.1); color: var(--color-moto);">🏍️</span>
+                                <div class="benefit-text">
+                                    <h4>Motos électriques</h4>
+                                    <p>Pour plus de puissance et d'autonomie, optez pour nos motos électriques silencieuses et écologiques.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnements - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/subscription.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html" class="active">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Se connecter</a>
+                <a href="register.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="subscription-hero">
+            <div class="container">
+                <h2>Nos formules d'abonnement</h2>
+                <p>Choisissez la formule qui correspond le mieux à vos besoins de mobilité</p>
+            </div>
+        </section>
+
+        <section class="subscription-plans">
+            <div class="container">
+                <div class="plan-toggle">
+                    <span>Mensuel</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span>Annuel <span class="discount">-20%</span></span>
+                </div>
+                
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Liberté</h3>
+                            <div class="plan-price">
+                                <div class="price-amount">0€</div>
+                                <div class="price-period">Sans engagement</div>
+                            </div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li>Accès à tous les kiosques</li>
+                                <li>Tarification à l'usage</li>
+                                <li>Vélos : 0,15€/min</li>
+                                <li>Trottinettes : 0,20€/min</li>
+                                <li>Motos : 0,30€/min</li>
+                                <li>Réservation 10 min à l'avance</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="register.html" class="btn btn-outline btn-block">Choisir ce plan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card popular">
+                        <div class="plan-badge">Populaire</div>
+                        <div class="plan-header">
+                            <h3>Urbain</h3>
+                            <div class="plan-price">
+                                <div class="price-amount">14,90€</div>
+                                <div class="price-period">par mois</div>
+                            </div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li>Accès à tous les kiosques</li>
+                                <li>30 min gratuites par jour sur les vélos</li>
+                                <li>15 min gratuites par jour sur les trottinettes</li>
+                                <li>Motos : 0,25€/min</li>
+                                <li>Réservation 20 min à l'avance</li>
+                                <li>Annulation gratuite</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="register.html" class="btn btn-primary btn-block">Choisir ce plan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="plan-price">
+                                <div class="price-amount">29,90€</div>
+                                <div class="price-period">par mois</div>
+                            </div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li>Accès à tous les kiosques</li>
+                                <li>60 min gratuites par jour sur les vélos</li>
+                                <li>30 min gratuites par jour sur les trottinettes</li>
+                                <li>15 min gratuites par jour sur les motos</li>
+                                <li>Réservation 30 min à l'avance</li>
+                                <li>Annulation gratuite</li>
+                                <li>Assistance prioritaire</li>
+                            </ul>
+                        </div>
+                        <div class="plan-cta">
+                            <a href="register.html" class="btn btn-outline btn-block">Choisir ce plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-offers">
+            <div class="container">
+                <h2 class="section-title">Offres spéciales</h2>
+                
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <div class="image-placeholder">
+                                <span>Offre Étudiant</span>
+                            </div>
+                        </div>
+                        <div class="offer-content">
+                            <h3>Offre Étudiant</h3>
+                            <p class="offer-price">9,90€ <span class="price-period">par mois</span></p>
+                            <p class="offer-description">Profitez de tous les avantages du plan Urbain avec une réduction de 30% sur présentation d'une carte étudiante valide.</p>
+                            <div class="offer-features">
+                                <ul>
+                                    <li>30 min gratuites par jour sur les vélos</li>
+                                    <li>15 min gratuites par jour sur les trottinettes</li>
+                                    <li>Réduction sur les motos électriques</li>
+                                </ul>
+                            </div>
+                            <a href="register.html" class="btn btn-primary">En profiter</a>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <div class="image-placeholder">
+                                <span>Offre Entreprise</span>
+                            </div>
+                        </div>
+                        <div class="offer-content">
+                            <h3>Offre Entreprise</h3>
+                            <p class="offer-price">À partir de 12,90€ <span class="price-period">par employé/mois</span></p>
+                            <p class="offer-description">Offrez à vos employés une solution de mobilité écologique et économique avec nos forfaits entreprise personnalisables.</p>
+                            <div class="offer-features">
+                                <ul>
+                                    <li>Facturation centralisée</li>
+                                    <li>Tableau de bord de gestion</li>
+                                    <li>Rapports d'utilisation</li>
+                                </ul>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vehicle-comparison">
+            <div class="container">
+                <h2 class="section-title">Comparaison des véhicules</h2>
+                
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <div class="vehicle-header">
+                                        <div class="vehicle-icon velo"></div>
+                                        <h3>Vélos électriques</h3>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="vehicle-header">
+                                        <div class="vehicle-icon trottinette"></div>
+                                        <h3>Trottinettes électriques</h3>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="vehicle-header">
+                                        <div class="vehicle-icon moto"></div>
+                                        <h3>Motos électriques</h3>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vitesse max</td>
+                                <td>25 km/h</td>
+                                <td>25 km/h</td>
+                                <td>45 km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Autonomie moyenne</td>
+                                <td>50-60 km</td>
+                                <td>30-40 km</td>
+                                <td>80-100 km</td>
+                            </tr>
+                            <tr>
+                                <td>Idéal pour</td>
+                                <td>Trajets moyens, confort</td>
+                                <td>Trajets courts, agilité</td>
+                                <td>Longs trajets, rapidité</td>
+                            </tr>
+                            <tr>
+                                <td>Tarif (sans abonnement)</td>
+                                <td>0,15€/min</td>
+                                <td>0,20€/min</td>
+                                <td>0,30€/min</td>
+                            </tr>
+                            <tr>
+                                <td>Permis requis</td>
+                                <td>Non</td>
+                                <td>Non</td>
+                                <td>AM minimum</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Questions fréquentes</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionne l'abonnement ?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nos abonnements vous donnent accès à des minutes gratuites chaque jour et des tarifs préférentiels. Vous pouvez choisir entre un engagement mensuel ou annuel. L'abonnement est automatiquement renouvelé jusqu'à résiliation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Puis-je changer de formule en cours d'abonnement ?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, vous pouvez passer à une formule supérieure à tout moment. Le changement vers une formule inférieure est possible à la fin de votre période d'engagement en cours.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionnent les minutes gratuites ?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les minutes gratuites sont créditées chaque jour à minuit et sont valables pendant 24h. Elles ne sont pas cumulables d'un jour à l'autre. Une fois vos minutes gratuites épuisées, le tarif préférentiel de votre abonnement s'applique.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quelles sont les conditions pour l'offre étudiant ?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>L'offre étudiant est disponible pour tous les étudiants de 18 à 26 ans sur présentation d'une carte étudiante ou d'un certificat de scolarité valide. La vérification est à renouveler chaque année.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment fonctionne le programme de fidélité ?</h3>
+                            <span class="faq-toggle"></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Notre programme de fidélité vous permet de gagner une location gratuite après 10 locations payantes. Les points sont automatiquement crédités sur votre compte après chaque trajet et n'ont pas de date d'expiration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à rejoindre la révolution de la mobilité urbaine ?</h2>
+                <p>Inscrivez-vous dès maintenant et bénéficiez de 30 minutes gratuites pour essayer nos véhicules</p>
+                <a href="register.html" class="btn btn-primary">Créer un compte gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/subscription.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processus de location - EcoRide</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/rental.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="profile.html" class="btn btn-outline">Mon compte</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="rental-process">
+            <div class="container">
+                <div class="process-header">
+                    <h2>Location de véhicule</h2>
+                    <p>Kiosque: <strong>Gare Centrale</strong></p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step-indicator">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Choix du véhicule</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Durée</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Paiement</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-content active" id="step-1">
+                        <h3>Choisissez votre véhicule</h3>
+                        
+                        <div class="vehicle-type-tabs">
+                            <button class="vehicle-type-tab active" data-type="velo">Vélos électriques</button>
+                            <button class="vehicle-type-tab" data-type="trottinette">Trottinettes électriques</button>
+                            <button class="vehicle-type-tab" data-type="moto">Motos électriques</button>
+                        </div>
+                        
+                        <div class="vehicle-grid">
+                            <div class="vehicle-card" data-id="velo-1">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Vélo City</span>
+                                    </div>
+                                    <div class="vehicle-badge">Populaire</div>
+                                </div>
+                                <div class="vehicle-info">
+                                    <h4>Vélo City</h4>
+                                    <div class="vehicle-specs">
+                                        <div class="spec">
+                                            <span class="spec-icon battery"></span>
+                                            <span class="spec-value">80%</span>
+                                        </div>
+                                        <div class="spec">
+                                            <span class="spec-icon range"></span>
+                                            <span class="spec-value">50km</span>
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-description">
+                                        <p>Vélo urbain confortable avec panier avant et siège ajustable.</p>
+                                    </div>
+                                </div>
+                                <div class="vehicle-select">
+                                    <button class="btn btn-outline btn-select-vehicle">Sélectionner</button>
+                                </div>
+                            </div>
+                            
+                            <div class="vehicle-card" data-id="velo-2">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Vélo Sport</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-info">
+                                    <h4>Vélo Sport</h4>
+                                    <div class="vehicle-specs">
+                                        <div class="spec">
+                                            <span class="spec-icon battery"></span>
+                                            <span class="spec-value">95%</span>
+                                        </div>
+                                        <div class="spec">
+                                            <span class="spec-icon range"></span>
+                                            <span class="spec-value">60km</span>
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-description">
+                                        <p>Vélo sportif léger avec assistance électrique puissante.</p>
+                                    </div>
+                                </div>
+                                <div class="vehicle-select">
+                                    <button class="btn btn-outline btn-select-vehicle">Sélectionner</button>
+                                </div>
+                            </div>
+                            
+                            <div class="vehicle-card" data-id="velo-3">
+                                <div class="vehicle-image">
+                                    <div class="image-placeholder">
+                                        <span>Vélo Cargo</span>
+                                    </div>
+                                </div>
+                                <div class="vehicle-info">
+                                    <h4>Vélo Cargo</h4>
+                                    <div class="vehicle-specs">
+                                        <div class="spec">
+                                            <span class="spec-icon battery"></span>
+                                            <span class="spec-value">85%</span>
+                                        </div>
+                                        <div class="spec">
+                                            <span class="spec-icon range"></span>
+                                            <span class="spec-value">45km</span>
+                                        </div>
+                                    </div>
+                                    <div class="vehicle-description">
+                                        <p>Vélo avec espace de chargement arrière pour vos courses ou bagages.</p>
+                                    </div>
+                                </div>
+                                <div class="vehicle-select">
+                                    <button class="btn btn-outline btn-select-vehicle">Sélectionner</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-actions">
+                            <button class="btn btn-primary btn-next" data-next="2">Continuer</button>
+                        </div>
+                    </div>
+                    
+                    <div class="step-content" id="step-2">
+                        <h3>Choisissez la durée de location</h3>
+                        
+                        <div class="selected-vehicle">
+                            <div class="selected-vehicle-image">
+                                <div class="image-placeholder">
+                                    <span>Vélo City</span>
+                                </div>
+                            </div>
+                            <div class="selected-vehicle-info">
+                                <h4>Vélo City</h4>
+                                <p>Batterie: 80% | Autonomie: 50km</p>
+                            </div>
+                        </div>
+                        
+                        <div class="duration-options">
+                            <div class="duration-option" data-duration="30">
+                                <div class="duration-header">
+                                    <h4>30 minutes</h4>
+                                    <div class="duration-price">2,50 €</div>
+                                </div>
+                                <div class="duration-description">
+                                    <p>Idéal pour un trajet court</p>
+                                </div>
+                            </div>
+                            
+                            <div class="duration-option" data-duration="60">
+                                <div class="duration-header">
+                                    <h4>1 heure</h4>
+                                    <div class="duration-price">4,00 €</div>
+                                </div>
+                                <div class="duration-description">
+                                    <p>Pour un aller-retour ou une balade</p>
+                                </div>
+                                <div class="duration-badge">Populaire</div>
+                            </div>
+                            
+                            <div class="duration-option" data-duration="180">
+                                <div class="duration-header">
+                                    <h4>3 heures</h4>
+                                    <div class="duration-price">9,00 €</div>
+                                </div>
+                                <div class="duration-description">
+                                    <p>Pour une demi-journée d'activités</p>
+                                </div>
+                            </div>
+                            
+                            <div class="duration-option" data-duration="1440">
+                                <div class="duration-header">
+                                    <h4>24 heures</h4>
+                                    <div class="duration-price">18,00 €</div>
+                                </div>
+                                <div class="duration-description">
+                                    <p>Pour une journée complète</p>
+                                </div>
+                                <div class="duration-badge">Économique</div>
+                            </div>
+                        </div>
+                        
+                        <div class="custom-duration">
+                            <h4>Durée personnalisée</h4>
+                            <div class="custom-duration-input">
+                                <input type="number" min="15" max="1440" step="15" value="60" id="custom-minutes">
+                                <span>minutes</span>
+                                <div class="custom-price">4,00 €</div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-actions">
+                            <button class="btn btn-outline btn-back" data-back="1">Retour</button>
+                            <button class="btn btn-primary btn-next" data-next="3">Continuer</button>
+                        </div>
+                    </div>
+                    
+                    <div class="step-content" id="step-3">
+                        <h3>Paiement et confirmation</h3>
+                        
+                        <div class="rental-summary">
+                            <h4>Récapitulatif de votre location</h4>
+                            <div class="summary-item">
+                                <span class="summary-label">Véhicule</span>
+                                <span class="summary-value">Vélo City</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Kiosque</span>
+                                <span class="summary-value">Gare Centrale</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Durée</span>
+                                <span class="summary-value">1 heure</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Date</span>
+                                <span class="summary-value">18/05/2025 - 14:30</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span class="summary-label">Total</span>
+                                <span class="summary-value">4,00 €</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <h4>Choisissez votre moyen de paiement</h4>
+                            
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="payment-option-content">
+                                        <div class="payment-icon card"></div>
+                                        <div class="payment-label">Carte bancaire</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="applepay">
+                                    <div class="payment-option-content">
+                                        <div class="payment-icon applepay"></div>
+                                        <div class="payment-label">Apple Pay</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="wallet">
+                                    <div class="payment-option-content">
+                                        <div class="payment-icon wallet"></div>
+                                        <div class="payment-label">Wallet étudiant</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="saved-cards">
+                                <h5>Cartes enregistrées</h5>
+                                <div class="saved-card">
+                                    <div class="card-info">
+                                        <div class="card-type visa"></div>
+                                        <div class="card-number">•••• •••• •••• 1234</div>
+                                    </div>
+                                    <div class="card-expiry">09/26</div>
+                                </div>
+                                <button class="btn btn-text">+ Ajouter une nouvelle carte</button>
+                            </div>
+                        </div>
+                        
+                        <div class="step-actions">
+                            <button class="btn btn-outline btn-back" data-back="2">Retour</button>
+                            <button class="btn btn-primary btn-confirm">Confirmer et déverrouiller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/rental.js"></script>
+</body>
+</html>

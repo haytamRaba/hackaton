@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRide - Location de véhicules électriques</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>EcoRide</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="map.html">Carte</a></li>
+                    <li><a href="subscription.html">Abonnements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Se connecter</a>
+                <a href="register.html" class="btn btn-primary">S'inscrire</a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Pédalez vers une ville plus verte !</h2>
+                    <p>Louez facilement des vélos, trottinettes et motos électriques partout dans la ville.</p>
+                    <div class="hero-buttons">
+                        <a href="map.html" class="btn btn-primary">Découvrir les kiosques</a>
+                        <a href="register.html" class="btn btn-secondary">Créer un compte</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Image placeholder -->
+                    <div class="image-placeholder">
+                        <span>Image de véhicule électrique</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vehicles">
+            <div class="container">
+                <h2 class="section-title">Nos véhicules électriques</h2>
+                <div class="vehicles-grid">
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <!-- Image placeholder -->
+                            <div class="image-placeholder">
+                                <span>Vélo électrique</span>
+                            </div>
+                        </div>
+                        <h3>Vélos électriques</h3>
+                        <p>Parfaits pour les déplacements urbains, nos vélos électriques vous permettent de vous déplacer sans effort.</p>
+                        <a href="map.html?type=velo" class="btn btn-outline">Louer maintenant</a>
+                    </div>
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <!-- Image placeholder -->
+                            <div class="image-placeholder">
+                                <span>Trottinette électrique</span>
+                            </div>
+                        </div>
+                        <h3>Trottinettes électriques</h3>
+                        <p>Rapides et maniables, nos trottinettes sont idéales pour les courts trajets en ville.</p>
+                        <a href="map.html?type=trottinette" class="btn btn-outline">Louer maintenant</a>
+                    </div>
+                    <div class="vehicle-card">
+                        <div class="vehicle-image">
+                            <!-- Image placeholder -->
+                            <div class="image-placeholder">
+                                <span>Moto électrique</span>
+                            </div>
+                        </div>
+                        <h3>Motos électriques</h3>
+                        <p>Pour plus de puissance et d'autonomie, optez pour nos motos électriques silencieuses et écologiques.</p>
+                        <a href="map.html?type=moto" class="btn btn-outline">Louer maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Comment ça marche</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Localisez</h3>
+                        <p>Trouvez le kiosque le plus proche sur notre carte interactive</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Réservez</h3>
+                        <p>Choisissez votre véhicule et la durée de location</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Déverrouillez</h3>
+                        <p>Utilisez l'application ou scannez le QR code au kiosque</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Roulez</h3>
+                        <p>Profitez de votre trajet écologique et retournez le véhicule à n'importe quel kiosque</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">Pourquoi choisir EcoRide ?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon eco"></div>
+                        <h3>Écologique</h3>
+                        <p>Réduisez votre empreinte carbone en optant pour des véhicules 100% électriques</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon economic"></div>
+                        <h3>Économique</h3>
+                        <p>Des tarifs adaptés à tous les budgets et des abonnements avantageux</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon flexible"></div>
+                        <h3>Flexible</h3>
+                        <p>Louez à la minute, à l'heure ou à la journée selon vos besoins</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon accessible"></div>
+                        <h3>Accessible</h3>
+                        <p>Des kiosques répartis stratégiquement dans toute la ville</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à rouler ?</h2>
+                <p>Rejoignez notre communauté de plus de 10 000 utilisateurs satisfaits</p>
+                <a href="register.html" class="btn btn-primary">Créer un compte gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>EcoRide</h2>
+                    <p>Mobilité urbaine écologique</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="map.html">Carte</a></li>
+                            <li><a href="subscription.html">Abonnements</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Légal</h3>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="mailto:contact@ecoride.fr">contact@ecoride.fr</a></li>
+                            <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoRide. Tous droits réservés.</p>
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
