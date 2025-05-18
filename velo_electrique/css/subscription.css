@@ -5,7 +5,29 @@
   padding: var(--spacing-xxl) 0;
   text-align: center;
 }
+/* pictures subs */
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* or set a fixed height */
+}
 
+.offer-image {
+    width: 100%;
+    height: 200px; /* set a fixed height for all images */
+    overflow: hidden;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+.offer-content {
+    flex: 1;
+    /* other styling */
+}
+/* test */
 .subscription-hero h2 {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-md);
